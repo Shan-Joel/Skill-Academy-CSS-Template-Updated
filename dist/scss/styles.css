@@ -605,6 +605,10 @@ img {
   text-align: center;
 }
 
+.ml-1 {
+  margin-left: 0.3rem;
+}
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -616,12 +620,22 @@ img {
           box-shadow: 0px -1px 4px #dedede;
 }
 
+@media screen and (min-width: 701px) {
+  .burger-icon {
+    display: none !important;
+    cursor: pointer;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .hide-sm {
     display: none;
   }
+  .table {
+    width: 200px;
+  }
   .container {
-    margin-top: 8rem;
+    margin-top: 6rem;
   }
   .x-large {
     font-size: 3rem;
@@ -634,17 +648,24 @@ img {
     font-size: 1rem;
   }
   .navbar {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
+    height: 70px;
+    cursor: pointer;
+  }
+  .navbar ul {
+    display: none;
   }
   ul {
     text-align: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  h1 {
-    margin-bottom: 1rem;
   }
   .dash-buttons a {
     display: block;
@@ -661,6 +682,9 @@ img {
   }
   .profile .btn {
     margin: 1rem 0;
+  }
+  .burger-icon {
+    display: block;
   }
   .profile-grid {
         grid-template-areas: 'top' 'about' 'exp' 'edu' 'github';
